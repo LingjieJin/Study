@@ -1,0 +1,23 @@
+from BTree import *
+
+root = nodea = TreeNode('A')
+root.left = nodeb =  TreeNode('B')
+root.right = nodec = TreeNode('C')
+nodeb.left = noded = TreeNode('D')
+nodeb.right = nodee = TreeNode('E')
+nodee.left = nodeh = TreeNode('H')
+nodee.right = nodei = TreeNode('I')
+nodec.left = nodef = TreeNode('F')
+nodec.right = nodeg = TreeNode('G')
+
+print("先序遍历:")
+preorder_traversal(root)
+print("\n中序遍历:")
+inorder_traversal(root)
+print("\n后序遍历:")
+postorder_traversal(root)
+print("\n层次遍历:")
+print(level_order_traversal(root))
+print("\n\n树的高度:", tree_height(root))
+print("树的叶子数:", leaf_count(root))
+print("树的结点数:", node_count(root))
